@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme:light; --background:244 241 234; --surface:255 254 250; --surface-raised:255 255 255; --text-main:24 32 27; --text-muted:91 105 96; --text-dim:119 128 120; --primary:23 76 60; --primary-light:55 166 106; --primary-dark:13 56 43; --terracotta:215 101 69; --cobalt:49 94 168; --success:47 133 82; --warning:181 126 25; --danger:184 62 52; --border:216 214 206; --shadow-paper:3px 4px 0 rgba(24,32,27,.07); }
+.dark { color-scheme:dark; --background:21 25 21; --surface:29 35 30; --surface-raised:37 44 38; --text-main:242 240 233; --text-muted:169 177 168; --text-dim:128 139 129; --primary:118 198 157; --primary-light:145 216 180; --primary-dark:82 159 119; --terracotta:233 135 105; --cobalt:119 158 220; --success:100 190 137; --warning:224 174 77; --danger:234 115 103; --border:57 65 57; --shadow-paper:3px 4px 0 rgba(0,0,0,.18); }
+
+@layer base {
+  html { @apply antialiased; }
+  body { @apply bg-background text-text-main font-sans; min-width:320px; background-image:radial-gradient(rgb(var(--border) / .42) .6px,transparent .6px); background-size:18px 18px; font-feature-settings:"cv02","cv03","cv04","cv11"; }
+  h1,h2,h3 { font-family:Manrope,Inter,ui-sans-serif,system-ui,sans-serif; }
+  ::selection { @apply bg-primary/20 text-text-main; }
+  :focus-visible { outline:2px solid rgb(var(--cobalt)); outline-offset:3px; }
+  ::-webkit-scrollbar { width:8px; height:8px; }
+  ::-webkit-scrollbar-thumb { @apply rounded-full bg-text-dim/30; }
+}
+@layer components {
+  .registry-label { @apply text-[10px] uppercase tracking-[0.18em] text-text-muted; font-family:"IBM Plex Mono",ui-monospace,monospace; }
+  .paper-panel { @apply border border-glass-border bg-background-elevated shadow-glass; }
+  .rule-title { @apply flex items-center gap-3 before:h-px before:w-8 before:bg-primary; }
+}
+@layer utilities {
+  .pb-safe { padding-bottom:env(safe-area-inset-bottom,0px); }
+  .text-balance { text-wrap:balance; }
+  .campus-grid { background-image:linear-gradient(rgb(var(--border)/.45) 1px,transparent 1px),linear-gradient(90deg,rgb(var(--border)/.45) 1px,transparent 1px); background-size:32px 32px; }
+}
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; transition-duration:.01ms!important; } }

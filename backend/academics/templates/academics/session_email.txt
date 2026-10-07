@@ -1,0 +1,15 @@
+Hi {{ student_name }},
+
+{{ lecturer_name }} has created an attendance session for {{ course_code }} - {{ course_name }}.
+
+Class: {{ class_name }}
+Venue: {{ venue_name }}
+Starts: {{ start_time }}
+Ends: {{ end_time }}
+
+Sign in to your student dashboard to view the session:
+{{ dashboard_url }}
+
+Check in only when you are physically at the venue. QR verification and location permission are still required. This email does not mark you present or bypass attendance checks.
+
+Campus Presence

@@ -1,0 +1,34 @@
+# Private environment configuration (keep the examples)
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python / Django
+**/.venv/
+**/__pycache__/
+**/*.py[cod]
+**/*.sqlite3
+**/.pytest_cache/
+**/staticfiles/
+
+# Node / Vite
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/*.local
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+
+# Editors and operating systems
+.vscode/
+**/.idea/
+**/*.suo
+**/*.sw?
+**/.DS_Store
+**/Thumbs.db
+
+# Generated submission package (can be recreated from the source)
+PROJECT_SOURCE_CODE/
+QR_Geofencing_Attendance_Source.zip
